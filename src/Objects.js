@@ -38,9 +38,9 @@ export function objectFieldsList(obj1, obj2, obj3) {
 */
 export function objectClone(obj, count) {
   let arr=[];
-  for(let i=0; i<count;i++){
-    let newObj = {...obj, id:i};
-      arr.push(newObj);
+  for(let i = 0; i < count; i++){
+    arr[i]=JSON.parse(JSON.stringify(obj));
+    arr[i].id = i;
   }
   return arr;
 }
